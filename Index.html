@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kennessy Ebooks | Best Digital Books & Resources</title>
+  <meta name="description" content="Kennessy Ebooks: Download premium ebooks, guides, and digital resources. Shop directly on Selar or contact us via WhatsApp, phone, or email.">
+  <meta name="author" content="Kennessy Ebooks">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Kennessy Ebooks">
+  <meta property="og:description" content="Premium ebooks and digital resources. Shop now on Selar.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://selar.com/12787117fs">
+
+  <style>
+    :root{
+      --bg: #0f172a;
+      --card: #111827;
+      --muted: #94a3b8;
+      --text: #f8fafc;
+      --accent: #22d3ee;
+      --accent-2: #a855f7;
+      --ok: #22c55e;
+      --ring: rgba(34, 211, 238, .35);
+      --max: 1100px;
+      --radius: 16px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; 
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(168,85,247,.15), transparent),
+                  radial-gradient(800px 400px at 110% 10%, rgba(34,211,238,.12), transparent),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:saturate(180%) blur(12px);
+      background:rgba(15,23,42,.6);
+      border-bottom:1px solid rgba(148,163,184,.1);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px; font-weight:800; font-size:1.1rem;
+    }
+    .brand-badge{
+      width:36px;height:36px;border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:grid;place-items:center;font-size:18px;
+    }
+    .nav-cta{display:flex;gap:10px}
+    .btn{
+      padding:10px 16px;border-radius:999px;font-weight:600;border:1px solid transparent;
+      transition:.2s transform,.2s box-shadow,.2s background;
+      white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b1020}
+    .btn-ghost{border-color:rgba(148,163,184,.2);color:var(--text)}
+    .btn-ghost:hover{background:rgba(148,163,184,.08)}
+
+    /* Hero */
+    .hero{
+      padding:72px 0 48px;
+    }
+    .hero-grid{
+      display:grid; gap:28px; align-items:center;
+      grid-template-columns:1.1fr .9fr;
+    }
+    .kicker{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:6px 12px;border-radius:999px;
+      background:rgba(34,211,238,.1);color:var(--accent);font-weight:600;font-size:.85rem;
+    }
+    h1{
+      font-size:clamp(2rem, 5vw, 3.2rem);
+      line-height:1.1;margin:16px 0 12px;
+    }
+    .lead{color:var(--muted);font-size:1.05rem;max-width:52ch}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid rgba(148,163,184,.15);
+      border-radius:var(--radius);
+      padding:18px;
+    }
+    .mock{
+      aspect-ratio: 4/3;border-radius:14px;overflow:hidden;
+      background: conic-gradient(from 180deg at 50% 50%, #1f2937, #0b1220, #1f2937);
+      display:grid;place-items:center;font-size:60px;
+    }
+
+    /* Features */
+    section{padding:56px 0}
+    .section-title{font-size:1.8rem;margin:0 0 8px}
+    .section-sub{color:var(--muted);margin:0 0 24px}
+    .grid-3{
+      display:grid; gap:16px;
+      grid-template-columns:repeat(3,1fr);
+    }
+    .feature h3{margin:8px 0 6px;font-size:1.05rem}
+    .feature p{margin:0;color:var(--muted);font-size:.95rem}
+
+    /* Store CTA */
+    .store{
+      background:linear-gradient(180deg, rgba(34,211,238,.08), rgba(168,85,247,.08));
+      border:1px dashed rgba(148,163,184,.25);
+      border-radius:var(--radius);
+      padding:28px;
+      display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;
+    }
+
+    /* Contact */
+    .contact-grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+    .contact .item{
+      display:flex;gap:12px;align-items:flex-start;
+      padding:16px;border-radius:14px;border:1px solid rgba(148,163,184,.15);
+      background:rgba(255,255,255,.02);
+    }
+    .icon{
+      width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+      background:rgba(34,211,238,.12);font-size:18px;flex:0 0 auto;
+    }
+
+    /* Footer */
+    footer{
+      padding:28px 0;border-top:1px solid rgba(148,163,184,.1);
+      color:var(--muted);font-size:.9rem;
+    }
+    .footer-row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .nav-cta .btn-ghost{display:none}
+    }
+
+    /* Focus states */
+    .btn:focus-visible, a:focus-visible{
+      outline:2px solid var(--ring); outline-offset:2px; border-radius:12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">
+        <div class="brand-badge">📚</div>
+        <span>Kennessy Ebooks</span>
+      </a>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="#books">Browse Books</a>
+        <a class="btn btn-primary" href="https://selar.com/12787117fs" target="_blank" rel="noopener">Shop on Selar</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container hero">
+    <div class="hero-grid">
+      <div>
+        <span class="kicker">Digital Books · Instant Download</span>
+        <h1>Level up with premium ebooks from Kennessy</h1>
+        <p class="lead">
+          Self-help, business, tech, and personal growth guides curated for fast learners. 
+          Get instant access after purchase and read on any device.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://selar.com/12787117fs" target="_blank" rel="noopener">Visit My Selar Store</a>
+          <a class="btn btn-ghost" href="https://wa.me/2348144811019" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="mock">📖</div>
+        <div style="margin-top:12px;color:var(--muted);font-size:.9rem">
+          New titles added weekly. Secure checkout via Selar.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section id="books">
+    <div class="container">
+      <h2 class="section-title">Why read with Kennessy Ebooks</h2>
+      <p class="section-sub">Clear, practical, and action-focused resources.</p>
+      <div class="grid-3">
+        <div class="card feature">
+          <div class="icon">⚡</div>
+          <h3>Instant Access</h3>
+          <p>Buy once, download immediately. No waiting, no shipping.</p>
+        </div>
+        <div class="card feature">
+          <div class="icon">🧠</div>
+          <h3>Actionable Content</h3>
+          <p>Step-by-step guides you can apply right away.</p>
+        </div>
+        <div class="card feature">
+          <div class="icon">📱</div>
+          <h3>Read Anywhere</h3>
+          <p>PDF format works on phones, tablets, and laptops.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container store">
+      <div>
+        <h2 class="section-title" style="margin:0">Browse the full catalog</h2>
+        <p class="section-sub" style="margin:6px 0 0">All payments and downloads are handled securely on Selar.</p>
+      </div>
+      <a class="btn btn-primary" href="https://selar.com/12787117fs" target="_blank" rel="noopener">Open Selar Store →</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container contact">
+      <h2 class="section-title">Contact Kennessy Ebooks</h2>
+      <p class="section-sub">Questions, bulk orders, or custom requests? Reach out directly.</p>
+      <div class="contact-grid">
+        <div class="item">
+          <div class="icon">💬</div>
+          <div>
+            <h3>WhatsApp</h3>
+            <p><a href="https://wa.me/2348144811019" target="_blank" rel="noopener">08144811019</a></p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon">📞</div>
+          <div>
+            <h3>Phone</h3>
+            <p><a href="tel:+2347038635933">07038635933</a></p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon">✉️</div>
+          <div>
+            <h3>Email</h3>
+            <p><a href="mailto:kennethchiakwa@gmail.com">kennethchiakwa@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-row">
+      <div>© <span id="y"></span> Kennessy Ebooks. All rights reserved.</div>
+      <div>
+        <a href="https://selar.com/12787117fs" target="_blank" rel="noopener">Store</a> ·
+        <a href="#contact">Contact</a> ·
+        <a href="#books">Books</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Update year automatically
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
